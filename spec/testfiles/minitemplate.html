@@ -1,0 +1,33 @@
+${(facet-topic)}
+$={(facet-topic)}
+$&{(facet-topic)}
+$+{(facet-topic)}
+$-{(facet-topic)}
+$?{(facet-topic)}
+$0{(facet-topic)}
+$S{(facet-topic)}
+$X{(facet-topic)}
+$x{(facet-topic)}
+$D{(facet-topic)}
+$d{(facet-topic)}
+$N{(facet-topic)}
+$J{(facet-topic)}
+$A{(facet-topic)}
+${This is (facet-topic) Here}
+${This is (facet-topic) Here ${(Hi)} there}
+
+<!--
+  HTML Comment
+-->
+
+<!--!!
+  Localbrain comment
+!!-->
+
+$!IF [ !${(FD facet-topic-label notitle)} ]
+    ${(facet-topic-name)}
+$!ELSEIF [ ${(${(facet-topic)}-selected-value)} ]
+   &nbsp;<a class="unselected reset" href="${(FACET RESET HREF)}" rel="nofollow">Reset</a>
+$!ELSE
+  Done
+$!ENDIF

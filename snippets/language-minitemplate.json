@@ -1,0 +1,44 @@
+{
+  ".source.minitemplate": {
+    "Single Minitemplate": {
+      "prefix": "single",
+      "body": "<mintemplate>\n<name>$1</name>\n<type>single</type>\n<content>$2</content>\n</mintemplate>\n\n"
+    },
+    "Repeated Minitemplate": {
+      "prefix": "repeated",
+      "body": "<mintemplate>\n<name>$1</name>\n<type>repeated</type>\n<separator>^</separator>\n<!--!! Add defines here !!-->\n$2\n<content>$3</content>\n</mintemplate>\n\n"
+    },
+    "Input Tag": {
+      "prefix": "input",
+      "body": "<input>yes$0</input>\n"
+    },
+    "Empty OK Tag": {
+      "prefix": "empty",
+      "body": "<empty_ok>no$0</empty_ok>\n"
+    },
+    "Trim Whitespace Tag": {
+      "prefix": "trim",
+      "body": "<trim_whitespace>yes$0</trim_whitespace>\n"
+    },
+    "Stop on set Tag": {
+      "prefix": "stop",
+      "body": "<stop_on_set>yes$0</stop_on_set>\n"
+    },
+    "Skip if defined Tag": {
+      "prefix": "skip",
+      "body": "<skip_if_defined>${($0)}</skip_if_defined>\n"
+    },
+    "Skip if not defined Tag": {
+      "prefix": "skipnot",
+      "body": "<skip_if_not_defined>${($0}</skip_if_not_defined>\n"
+    },
+    "Define Tag": {
+      "prefix": "define",
+      "body": "<define name=\"$1\">\\${($2)}</define>\n"
+    },
+    "Define List Tag": {
+      "prefix": "definelist",
+      "body": "<definelist name=\"$1\">\\${($2)}</define>\n"
+    }
+  }
+}

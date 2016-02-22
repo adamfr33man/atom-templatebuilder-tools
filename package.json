@@ -1,0 +1,34 @@
+{
+  "name": "atom-templatebuilder-tools",
+  "author": "Adam Freeman <shavenyaknz@gmail.com>",
+  "version": "0.0.0",
+  "description": "Suite of tools to att tEmplate Builder support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {
+    "atom-linter": "^4.5.0",
+    "jquery": "^2.2.0",
+    "livereload": "^0.4.1"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "repository": "https://github.com/adamfr33man/atom-templatebuilder-tools.git",
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "main": "./src/main.js",
+  "license": "MIT"
+}

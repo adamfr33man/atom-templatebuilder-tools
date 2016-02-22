@@ -1,0 +1,57 @@
+{
+  "scopeName": "source.lbsearch",
+  "name": "Localbrain Config file",
+  "fileTypes": ["lb_search.conf.template"],
+  "patterns": [
+    {
+      "match": "#.*",
+      "name": "comment.line.lbsearch",
+      "patterns": {
+        "match": "--(Start|End):.*?--",
+        "name": "constant.character.escape.mylanguage"
+      }
+    },
+    {
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.lbsearch"
+        }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.lbsearch"
+        }
+      },
+      "name": "constant.support.lbsearch"
+    },
+    {
+      "match": "set:",
+      "name": "keyword.other.lbsearch"
+    },
+    {
+      "match": "{(STAGE|PRODUCTION|TYPE:LOCAL|TYPE:PREVIEW|TYPE:DEMO|TYPE:STAGE|TYPE:PROD)}",
+      "name": "keyword.operator.lbsearch"
+    },
+    {
+      "match": "(set:)?(.+)(=)(.+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.lbsearch"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.lbsearch"
+        },
+        "3": {
+          "name": "punctuation.definition.string.begin.lbsearch"
+        },
+        "4": {
+          "name": "string.lbsearch"
+        }
+      },
+      "name": ""
+    }
+
+  ]
+}

@@ -1,0 +1,34 @@
+# Comments should get ignored.
+
+#[GLOBAL]
+[LOCALBRAIN]
+#Source Modules
+# This sould be cool
+loadmodule=SITE_INDEX
+loadmodule=DYNAMIC_TEMPLATE_SOURCE
+loadmodule=AUTOCOMPLETE_SOURCE
+loadmodule=LANDING_PAGE_SOURCE
+# This should warn missing _SOURCE
+loadmodule=SITE_INDEX2
+
+#Templates
+loadtemplate=DEFAULT_TS
+loadtemplate=CUSTOM_TS
+loadtemplate=STDXML_TS
+loadtemplate=SUGXML_TS
+# This needs to cause a problem
+loadtemplate=SUGXML_TEMPLATE
+
+[SECTION]
+this=that
+set:that=the-other-thing
+
+# TODO Should this be allowed ?
+[section]
+# Duplicate section should throw an error
+[SECTION]
+
+[CUSTOM_TS]
+
+# Duplicate section, should throw error
+[CUSTOM_TS]

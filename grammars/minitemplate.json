@@ -1,0 +1,47 @@
+{
+  "scopeName": "source.minitemplate",
+  "name": "Localbrain Minitemplate",
+  "fileTypes": ["minitemplate.html"],
+  "patterns": [{
+    "begin": "(\\$)([=&+-?0SXxDdNJA]?)({)",
+    "beginCaptures": {
+      "1": {
+        "name": "constant.character.minitemplate"
+      },
+      "2": {
+        "name": "keyword.control.minitemplate"
+      },
+      "3": {
+        "name": "constant.character.minitemplate"
+      }
+    },
+    "end": "\\}",
+    "endCaptures": {
+      "0": {
+        "name": "constant.character.minitemplate"
+      }
+    },
+    "patterns": {
+      "begin": "\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "constant.character.minitemplate"
+        }
+      },
+      "end": "\\)",
+      "endCaptures": {
+        "0": {
+          "name": "constant.character.minitemplate"
+        }
+      }
+    }
+  }, {
+      "match": "\\$!IF",
+      "name": "punctuation.definition.string.minitemplate"
+  }, {
+      "match": "\\$!(ENDIF|ELSEIF|ELSE)",
+      "name": "punctuation.definition.string.minitemplate"
+  },{
+    "include": "text.html.basic"
+  }]
+}
