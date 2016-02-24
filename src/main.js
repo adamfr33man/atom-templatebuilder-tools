@@ -11,13 +11,15 @@ module.exports = {
   activate: () => {
     var tbLivereload = require('./tb-livereload'),
       linterLbsearch = require('./linters/linter-lbsearch');
+      linterMinitemplate = require('./linters/linter-minitemplate');
 
     // Load modules
     tbLivereload.activate();
 
     // Load the linters
     linterLbsearch.activate();
+    linterMinitemplate.activate();
 
-    module.exports.provideLinter = linterLbsearch.provideLinter;
+    module.exports.provideLinter = [linterLbsearch.provideLinter, linterMinitemplate.provideLinter];
   }
 };

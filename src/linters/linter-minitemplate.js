@@ -1,6 +1,6 @@
 'use babel';
 
-const linter = require('./minitemplateLinter.js');
+const linter = require('./minitemplateLinter');
 
 module.exports = {
   activate() {
@@ -13,7 +13,7 @@ module.exports = {
   provideLinter() {
     const provider = {
       name: 'Minitemplate Linter',
-      grammarScopes: ['minitemplate.html'],
+      grammarScopes: ['source.minitemplate'],
       scope: 'file',
       lintOnFly: true,
       lint: function(textEditor) {
@@ -22,8 +22,6 @@ module.exports = {
         return new Promise(function(resolve, reject) {
           // do something async or
           console.log('Linting', textEditor.getPath());
-          // Get individual lines
-          let lines = textEditor.getText().split(/\n/),
 
           messages = linter.lintText(textEditor.getText(), textEditor.getPath());
 
