@@ -1,7 +1,7 @@
 {
   "scopeName": "source.minitemplate",
   "name": "Localbrain Minitemplate",
-  "fileTypes": ["minitemplate.html"],
+  "fileTypes": ["html"],
   "patterns": [{
     "begin": "(\\$)([=&+-?0SXxDdNJA]?)({)",
     "beginCaptures": {
