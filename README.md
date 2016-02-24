@@ -26,7 +26,7 @@ This will look for ${(SOMETHING)} style tags and highlight them separate within 
 
 ### Snippets
 
-TODO: Add the $!IF constructs
+Have a look at the settings for this package to see all the snippets.
 
 #### Template Blocks
 
@@ -35,11 +35,6 @@ Type in repeated and hit tab in your minitemplate file to see this in action. Ty
 ![Repeated Snippets](docs/RepeatedSnippets.gif)
 
 TODO: Add replace-char, replace-str, extra headers see LocalBrain Minitemplate wiki for details
-
-# LB Search conf linter questions
-
-   * Are section names case sensitive ?
-   * What are the required sections ?
 
 #### Minitemplate modifiers
 
