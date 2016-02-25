@@ -1,6 +1,7 @@
 'use babel';
 
 module.exports.lintText = (text, path) => {
+
   const messages = [],
       minitemplate = {
         minitemplates: {}

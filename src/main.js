@@ -1,3 +1,5 @@
+'use babel';
+
 // Get the config setup
 module.exports = {
   config: {
@@ -10,16 +12,14 @@ module.exports = {
   },
   activate: () => {
     var tbLivereload = require('./tb-livereload'),
-      linterLbsearch = require('./linters/linter-lbsearch');
-      linterMinitemplate = require('./linters/linter-minitemplate');
+      linterTemplatebuilder = require('./linters/linter-templatebuilder');
 
     // Load modules
     tbLivereload.activate();
 
     // Load the linters
-    linterLbsearch.activate();
-    linterMinitemplate.activate();
+    linterTemplatebuilder.activate();
 
-    module.exports.provideLinter = linterLbsearch.provideLinter;
+    module.exports.provideLinter = linterTemplatebuilder.provideLinter;
   }
 };

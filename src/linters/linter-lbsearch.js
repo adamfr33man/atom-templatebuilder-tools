@@ -12,7 +12,7 @@ module.exports = {
 
     return {
       name: 'LB Search Linter',
-      grammarScopes: ['source.lbsearch'], // ['*'] will get it triggered regardless of grammar
+      grammarScopes: ['source.lbsearch', 'source.minitemplate'], // ['*'] will get it triggered regardless of grammar
       scope: 'file', // or 'project'
       lintOnFly: true,
       lint: function(textEditor) {
