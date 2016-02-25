@@ -10,7 +10,7 @@ module.exports = {
     console.log('Minitemplate Linter was deactivated');
   },
 
-  provideLinter() {
+  getLinter() {
     const provider = {
       name: 'Minitemplate Linter',
       grammarScopes: ['source.minitemplate'],

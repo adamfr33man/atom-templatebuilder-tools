@@ -10,7 +10,7 @@ module.exports = {
   provideLinter() {
     console.log('PROVIDED !');
 
-    const provider = {
+    return {
       name: 'LB Search Linter',
       grammarScopes: ['source.lbsearch'], // ['*'] will get it triggered regardless of grammar
       scope: 'file', // or 'project'
@@ -28,6 +28,5 @@ module.exports = {
         });
       }
     };
-    return provider;
   }
 };

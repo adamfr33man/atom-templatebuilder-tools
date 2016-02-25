@@ -1,6 +1,7 @@
 # Comments should get ignored.
 
 #[GLOBAL]
+
 [LOCALBRAIN]
 #Source Modules
 # This sould be cool

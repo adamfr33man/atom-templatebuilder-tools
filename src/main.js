@@ -20,6 +20,6 @@ module.exports = {
     linterLbsearch.activate();
     linterMinitemplate.activate();
 
-    module.exports.provideLinter = [linterLbsearch.provideLinter, linterMinitemplate.provideLinter];
+    module.exports.provideLinter = linterLbsearch.provideLinter;
   }
 };
