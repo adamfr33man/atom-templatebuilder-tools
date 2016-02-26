@@ -1,7 +1,7 @@
 {
   "name": "atom-templatebuilder-tools",
   "author": "Adam Freeman <shavenyaknz@gmail.com>",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Suite of tools to add Template Builder support in Atom",
   "engines": {
     "atom": "*"
