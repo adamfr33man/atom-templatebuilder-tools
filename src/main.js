@@ -19,5 +19,11 @@ module.exports = {
     linterLbsearch.activate();
 
     module.exports.provideLinter = linterLbsearch.provideLinter;
+
+    // Setup WebSocket
+    var connection = new WebSocket('ws://localhost:2015/assembler-end-point');
+    connection.onmessage = function(e) {
+      console.log('Server:', e.data);
+    };
   }
 };
