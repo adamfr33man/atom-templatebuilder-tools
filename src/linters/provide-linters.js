@@ -1,8 +1,8 @@
 'use babel';
 
 // Import linters
-const minitemplateLinter = require('./minitemplateLinter'),
-      lbSearchLinter = require('./lbSearchLinter');
+const minitemplateLinter = require('./linter-minitemplate'),
+      lbSearchLinter = require('./linter-lbsearch');
 
 module.exports = {
   activate() {

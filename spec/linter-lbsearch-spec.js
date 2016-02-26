@@ -1,6 +1,6 @@
 'use babel';
 
-const lbLinter = require('../src/linters/lbSearchLinter');
+const lbLinter = require('../src/linters/linter-lbsearch');
 
 describe('The lbsearch provider for Linter', () => {
 

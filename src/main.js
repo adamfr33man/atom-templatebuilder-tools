@@ -12,7 +12,7 @@ module.exports = {
   },
   activate: () => {
     var tbLivereload = require('./tb-livereload'),
-      linterTemplatebuilder = require('./linters/linter-templatebuilder');
+      linterTemplatebuilder = require('./linters/provide-linters');
 
     // Load modules
     tbLivereload.activate();

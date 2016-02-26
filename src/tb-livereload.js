@@ -5,8 +5,7 @@ import {Notification} from 'atom';
 var livereload = require('livereload'),
     fs = require('fs'),
     os = require('os'),
-    path = require('path'),
-    $ = require('jquery');
+    path = require('path');
 
 var watcher,
     lastLength = 0,
