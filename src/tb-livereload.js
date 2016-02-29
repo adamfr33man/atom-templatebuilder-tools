@@ -11,15 +11,22 @@ var watcher,
     lastLength = 0,
     logPath,
     reloadFile = path.join(os.tmpdir(), 'reload.html'),
-    server = livereload.createServer(),
-    connection;
-
-server.watch(reloadFile);
+    server = null,
+    connection = null,
+    interval = null;
 
 exports.activate  = () => {
   console.log('TB LR My package was activated');
 
-  watchTB();
+  try {
+    server = livereload.createServer();
+    server.watch(reloadFile);
+
+    tryConnection();
+  } catch(e) {
+     console.error('Port probably in use.', e);
+  }
+
 };
 
 exports.deactivate = () => {
@@ -47,4 +54,35 @@ function watchTB() {
       console.log(res);
     }
   };
+
+  connection.onclose = function() {
+    if(typeof interval === 'undefined') {
+      atom.notifications.addError('Lost connection to connector.');
+    }
+    connection = null;
+    tryConnection();
+  };
+
+    // When the connection is open, send some data to the server
+  connection.onopen = function () {
+    atom.notifications.addInfo('Connected to connector.');
+    clearInterval(interval);
+    interval = null;
+  };
+
+  // Log errors
+  connection.onerror = function (error) {
+    console.log('WebSocket Error ' + error);
+  };
+}
+
+function tryConnection() {
+  if(interval) {
+    return;
+  }
+
+  interval = setInterval(function() {
+    console.log('Trying to reconnect');
+    watchTB();
+  }, 5000);
 }
