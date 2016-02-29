@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.6.0
+
+   * Switched to using a Websocket for build notifications.
+
 ## v0.5.0
 
    * Improved linting to work with LB Search and Minitemplates - rules are only on LB Search at the moment
