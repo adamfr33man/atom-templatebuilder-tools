@@ -4,6 +4,18 @@
       "prefix": "single",
       "body": "<mintemplate>\n<name>$1</name>\n<type>single</type>\n<content>$2</content>\n</mintemplate>\n\n"
     },
+    "Global Minitemplate": {
+      "prefix": "global",
+      "body": "<mintemplate>\n<name>$1</name>\n<type>single</type>\n<global>yes</global>\n<content>$2</content>\n</mintemplate>\n\n"
+    },
+    "Replace-String Minitemplate": {
+      "prefix": "replace-string",
+      "body": "<mintemplate>\n<name>$1</name>\n<type>replace-string</type>\n<define name=\"search-for\">$2</define>\n<define name=\"replace-with\">$3</define>\n<content>$4</content>\n</mintemplate>\n\n"
+    },
+    "Replace-Char Minitemplate": {
+      "prefix": "replace-char",
+      "body": "<mintemplate>\n<name>$1</name>\n<type>replace-char</type>\n<define name=\"search-for\">$2</define>\n<define name=\"replace-with\">$3</define>\n<content>$4</content>\n</mintemplate>\n\n"
+    },
     "Repeated Minitemplate": {
       "prefix": "repeated",
       "body": "<mintemplate>\n<name>$1</name>\n<type>repeated</type>\n<separator>^</separator>\n<!--!! Add defines here !!-->\n$2\n<content>$3</content>\n</mintemplate>\n\n"
@@ -39,6 +51,10 @@
     "Define List Tag": {
       "prefix": "definelist",
       "body": "<definelist name=\"$1\">\\${($2)}</define>\n"
+    },
+    "Block If Statement": {
+      "prefix": "if",
+      "body": "$!IF [ $1 ]\n$2\n$!ELSE\n$3\n$!ENDIF\n"
     }
   }
 }
