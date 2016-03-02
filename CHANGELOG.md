@@ -1,5 +1,10 @@
 # Change Log
 
+## v0.7.0
+
+   * Snippets for Minitemplate now include Global and Char/String replacement templates
+   * If statment added
+
 ## v0.6.0
 
    * Switched to using a Websocket for build notifications.
