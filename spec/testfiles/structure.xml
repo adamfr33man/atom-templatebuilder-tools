@@ -1,0 +1,12 @@
+<st_sort>
+  <st_sorttitle></st_sorttitle>
+  <st_sortoptions>
+    <st_sortoption-wrapper repeated="true">
+      <st_sortoption></st_sortoption>
+      <st_sortoption-icon></st_sortoption-icon>
+      <st_sortoption-selected></st_sortoption-selected>
+      <st_sortoption-selected-icon></st_sortoption-selected-icon>
+      <st_sortseparator></st_sortseparator>
+    </st_sortoption-wrapper>
+  </st_sortoptions>
+</st_sort>
