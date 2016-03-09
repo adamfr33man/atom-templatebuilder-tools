@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.7.1
+
+   * Fixed typo in snippets from 'mintemplate' to 'minitemplate'
+
 ## v0.7.0
 
    * Snippets for Minitemplate now include Global and Char/String replacement templates
