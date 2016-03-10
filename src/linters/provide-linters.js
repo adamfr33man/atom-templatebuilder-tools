@@ -25,7 +25,7 @@ module.exports = {
             scopeName = textEditor.getGrammar().scopeName;
 
         return new Promise(function(resolve, reject) {
-          debugger;
+
           switch(scopeName) {
             case 'source.minitemplate':
               linter = minitemplateLinter;
