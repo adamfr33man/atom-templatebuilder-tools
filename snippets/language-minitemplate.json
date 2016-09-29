@@ -50,7 +50,7 @@
     },
     "Define List Tag": {
       "prefix": "definelist",
-      "body": "<definelist name=\"$1\">\\${($2)}</define>\n"
+      "body": "<definelist name=\"$1\">\\${($2)}</definelist>\n"
     },
     "Block If Statement": {
       "prefix": "if",
